@@ -4,7 +4,7 @@ import { Link } from 'react-router-dom';
 import axios from 'axios';
 
 
-export default class Beers extends React.Component {
+export default class   WishItems extends React.Component {
     state = {
         allWish: []
     }
@@ -40,9 +40,7 @@ export default class Beers extends React.Component {
                     return (
                         <div key={wish._id}>
                             <Link to={`/wish/${wish._id}`}>
-                                
-
-                                <img src={wish.image_url} alt=""/>
+                            <img src={wish.image} alt=""/>
                             </Link>
 
                         </div>

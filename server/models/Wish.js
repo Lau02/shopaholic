@@ -26,10 +26,7 @@ const schemaWish = new Schema({
 
     wishGranted: String,
 
-    timestamps: {
-        createdAt: 'created_at',
-        updatedAt: 'updated_at'
-    }
+    timestamps: true
 })
 
 const Model = mongoose.model("Wish", schemaWish);

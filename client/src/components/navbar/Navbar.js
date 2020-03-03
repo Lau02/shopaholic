@@ -23,6 +23,7 @@ class Navbar extends Component {
     if (this.state.loggedInUser) {
       return (
         <nav className="nav-style">
+        <image src="/public/images/pinklogo.png" width= "100"></image>
           <ul>
             <li>
               <a onClick={this.handleLogout}>Logout</a>

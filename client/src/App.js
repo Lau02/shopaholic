@@ -67,6 +67,7 @@ class App extends Component {
           <Redirect to="/home" />
 
           <div className="App">
+          
             <header className="App-header">
               <Navbar userInSession={this.state.loggedInUser} logout={this.logout} />
               {/* aqui simplemente se muestra un lorem ipsum genérico para que veáis contenidos que solo se muestran a usuarios logeados */}
