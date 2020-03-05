@@ -65,10 +65,10 @@ class App extends Component {
           <Redirect to="/" />
 
           <div className="App">
-          <section class="logo-title">
+          {/* <section class="logo-title"> */}
             <img src="/images/stop2.png"></img>
             <h1>Shopaholic</h1>
-            </section>
+            {/* </section> */}
             <header className="App-header">
               <Navbar userInSession={this.state.loggedInUser} logout={this.logout} />
               <Contents />
