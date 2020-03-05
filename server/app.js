@@ -11,10 +11,10 @@ const session = require('express-session');
 const MongoStore = require('connect-mongo')(session);
 const cors = require('cors');
 
-const {DBURL} = process.env;
-mongoose.Promise = Promise;
+// const {DBURL} = process.env;
+// mongoose.Promise = Promise;
 mongoose
-  .connect(DBURL)
+  .connect(`${process.env.DBURL}`)
   .then(() => {
     console.log(`Connected to Mongo on ${DBURL}`)
   }).catch(err => {
@@ -70,11 +70,11 @@ app.locals.title = 'Express - Generated with IronGenerator';
 
 
 
-const authRouter = require('./routes/auth');
-app.use('/api/auth', authRouter);
+const index = require('./routes/index.js');
+app.use('/', index);
 
-
-const indexRoutes = require('./routes/wishes');
-app.use('/api/wishes', indexRoutes);
+app.use((req, res) => {
+  res.sendFile(__dirname + "/public/index.html");
+})
 
 module.exports = app;

@@ -1,6 +1,6 @@
 const express = require('express');
 const router  = express.Router();
-const wishes = require('../models/Wish')
+const wishes = require('../../models/Wish')
 
 // router.get('/wishes', (req, res, next) => {
 //   res.render('/wishes')

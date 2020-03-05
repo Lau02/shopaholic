@@ -1,6 +1,7 @@
 .App {
     font-family: 'Raleway', sans-serif;
     display: flex;
+    flex-direction: column;
     justify-content: space-between;
     align-items: center;
 
@@ -9,11 +10,18 @@
     // background-size: cover;
     // background-repeat: no-repeat;
 
-    // img{
-    //     display: flex;
-    //     align-items: flex-start;
-    //     width: 4em;
-    // }
+    #logo-title{
+      background-color: #af224d;
+    }
+    div .logo{
+      width: 100vw;
+      
+    }
+    img{
+        display: flex;
+        align-items: flex-start;
+        width: 4em;
+    }
     header {
         background-image: "/images/stop2.png";
         background-color: #DF7B42;

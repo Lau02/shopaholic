@@ -11,9 +11,9 @@ const Wish = require('../models/Wish')
 
 const bcryptSalt = 10;
 
-const {DBURL} = process.env;
+
 mongoose
-  .connect(DBURL, {useNewUrlParser: true,  useUnifiedTopology: true })
+  .connect( `${process.env.DBURL}`, {useNewUrlParser: true,  useUnifiedTopology: true })
   .then(x => {
     console.log(`Connected to Mongo! Database name: "${x.connections[0].name}"`)
   })
