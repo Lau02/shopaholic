@@ -3,12 +3,29 @@ label{
     color: rgb(255, 255, 255);
     font-weight: bold;
 }
+fieldset{
+  
+}
+input[type="submit"]{
+	width:100%;
+	padding:8px 16px;
+	margin-top:32px;
+	border:2px solid  rgb(241, 169, 205);
+	border-radius:5px;
+	display:block;
+    color:#fff;
+    font-size: 16px;
+    font-weight: bold;
+	background-color:#af224d;
+} 
 input {
-    padding: 5px;
+    
+    padding: 8px;
     background-color: rgb(241, 169, 205);
     outline: none;
     border-radius: 5px;
-   border: 1px solid rgb(214, 80, 154);
+   border: 2px solid rgb(214, 80, 154);
 }
+
 
 }

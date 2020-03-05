@@ -23,10 +23,7 @@ const schemaWish = new Schema({
         type: Date
     },
     image: String,
-
     wishGranted: String,
-
-    timestamps: true
 })
 
 const Model = mongoose.model("Wish", schemaWish);

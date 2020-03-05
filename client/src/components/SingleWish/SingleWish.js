@@ -1,10 +1,29 @@
 import React from 'react';
-// import './BeerDetail.css'
+import WishesService from '../../services/WishesService';
+import { Link } from 'react-router-dom';
+
 export default class SingleWish extends React.Component {
+  constructor(props){
+    super(props)
+    this.service = new WishesService()
+    this.state = {
+      wish: {}
+    }
+  }
+
+  componentDidMount(){
+    console.log(this.props.match.params)
+    this.service.getOneWish()
+    .then(response => {
+      //set state
+      console.log(response)
+    })
+  }
+
   render() {
     return (
       <div className="singlewish">
-        <img src={this.props.wish.image_url} />
+        {/* <img src={this.props.wish.image} /> */}
         <p className="image">{this.props.wish.image}</p>
         <p className="title">{this.props.wish.name}</p>
         <p className="descrption">{this.props.wish.description}</p>

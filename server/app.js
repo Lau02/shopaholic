@@ -74,7 +74,7 @@ const authRouter = require('./routes/auth');
 app.use('/api/auth', authRouter);
 
 
-const indexRoutes = require('./routes/index');
-app.use('/api/index', indexRoutes);
+const indexRoutes = require('./routes/wishes');
+app.use('/api/wishes', indexRoutes);
 
 module.exports = app;

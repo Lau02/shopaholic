@@ -1,7 +1,6 @@
 import React, { Component } from "react";
 import { Link } from "react-router-dom";
-import AuthService from "../auth/AuthService";
-//import logo from "../../logo-ironhack-blue.png";
+import AuthService from "../../services/AuthService";
 import "./Navbar.css"
 
 class Navbar extends Component {
@@ -23,7 +22,7 @@ class Navbar extends Component {
     if (this.state.loggedInUser) {
       return (
         <nav className="nav-style">
-        <image src="/public/images/pinklogo.png" width= "100"></image>
+        {/* <image src="/public/images/pinklogo.png" width= "100"></image> */}
           <ul>
             <li>
               <a onClick={this.handleLogout}>Logout</a>

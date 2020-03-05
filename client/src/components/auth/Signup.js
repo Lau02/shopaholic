@@ -1,6 +1,6 @@
 // auth/Signup.js
 import React, { Component } from 'react';
-import AuthService from './AuthService'
+import AuthService from '../../services/AuthService'
 import "./Signup.scss";
 
 //signup y login son iguales a excepción de el html renderizado y el endpoint de nuestra API rest a la que llamamos
@@ -59,11 +59,11 @@ render() {
         </fieldset>
         
         <fieldset>
-          <label>Password </label>
+          <label>Password   </label>
           <input class="input-signup" type="password" name="password" value={this.state.password} onChange={ e => this.handleChange(e)} />
         </fieldset>
         
-        <input type="submit" value="Sign up" />
+        <input class="submit" type="submit" value="Sign up" />
       </form>
 
       <h1>{this.state.error ? 'Error' : ''}</h1>

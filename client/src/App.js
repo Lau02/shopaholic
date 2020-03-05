@@ -1,6 +1,7 @@
 import React, { Component } from "react";
 import "./App.css";
 import "./scss/App.scss"
+
 import { Switch, Route, Redirect } from "react-router-dom";
 
 // import ProjectList from './components/projects/ProjectList';
@@ -9,8 +10,11 @@ import Navbar from "./components/navbar/Navbar";
 // import ProjectDetails from './components/projects/ProjectDetails';
 import Signup from "./components/auth/Signup";
 import Login from "./components/auth/Login";
-import AuthService from "./components/auth/AuthService";
+import AuthService from "./services/AuthService";
 import Contents from "./components/contents/Contents";
+import WishList from "./components/WishList/WishList";
+import SingleWish from "./components/SingleWish/SingleWish";
+import Wishitems from "./components/WishItems/WishItems";
 
 
 
@@ -68,10 +72,21 @@ class App extends Component {
 
           <div className="App">
           
+            {/* <img src="/images/stop2.png"></img> */}
             <header className="App-header">
               <Navbar userInSession={this.state.loggedInUser} logout={this.logout} />
               {/* aqui simplemente se muestra un lorem ipsum genérico para que veáis contenidos que solo se muestran a usuarios logeados */}
               <Contents />
+              <Switch>
+
+                <Route exact path ="/all" render = {() => <WishList></WishList>} />
+                <Route exact path ="/:id" render = {() => <SingleWish></SingleWish>}/>
+
+                <Route />
+             </Switch>
+
+
+
 
             </header>
           </div>
@@ -89,6 +104,7 @@ class App extends Component {
               <Switch>
                 <Route exact path="/signup" render={() => <Signup getUser={this.getUser} />} />
                 <Route exact path="/login" render={() => <Login getUser={this.getUser} />} />
+
               </Switch>
             </header>
           </div>

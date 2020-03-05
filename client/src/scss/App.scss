@@ -1,12 +1,25 @@
 .App {
     font-family: 'Raleway', sans-serif;
-    text-align: center;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
 
+
+    // background-image: "/public/images/12394150-ilustracion-vectorial-de-tres-mujeres-jovenes-con-sus-bolsas-de-compras-de-cada-mujer-se-agrupan-y-s.jpg";
+    // background-size: cover;
+    // background-repeat: no-repeat;
+
+    // img{
+    //     display: flex;
+    //     align-items: flex-start;
+    //     width: 4em;
+    // }
     header {
+        background-image: "/images/stop2.png";
         background-color: #DF7B42;
         min-height: 100vh;
         display: flex;
-        flex-direction: column;
+        flex-direction: flex;
         align-items: center;
         justify-content: top;
         font-size: calc(10px + 2vmin);
