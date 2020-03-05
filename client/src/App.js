@@ -94,7 +94,6 @@ class App extends Component {
               <Switch>
                 <Route exact path="/signup" render={() => <Signup getUser={this.getUser} />} />
                 <Route exact path="/login" render={() => <Login getUser={this.getUser} />} />
-
               </Switch>
             </header>
           </div>

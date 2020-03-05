@@ -143,25 +143,15 @@ User.deleteMany()
   console.log(usersCreated.map(u => u._id));
 })
 .then(() => {
-  // Close properly the connection to Mongoose
-  mongoose.disconnect()
-})
-.catch(err => {
-  mongoose.disconnect()
-  throw err
-})
-
-Wish.deleteMany()
-.then(() => {
-  return Wish.create(dataWish)
-})
-.then(dataUCreated => {
-  console.log(`${dataUCreated.length} dataU created with the following id:`);
-  console.log(dataUCreated.map(u => u._id));
-})
-.then(() => {
-  // Close properly the connection to Mongoose
-  mongoose.disconnect()
+  Wish.deleteMany()
+  .then(() => {
+    console.log('entra aqui')
+    return Wish.create(dataWish)
+  })
+  .then(dataCreated => {
+    console.log(`${dataCreated.length} wishes created with the following id:`);
+    console.log(dataCreated.map(u => u._id));
+  })
 })
 .catch(err => {
   mongoose.disconnect()
