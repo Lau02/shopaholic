@@ -15,26 +15,29 @@ export default class WishList extends React.Component {
     }
 
     componentDidMount() {
-      this.service.getAllWishes()
+      {this.state.wishes.length === 0 && (
+        this.service.getAllWishes()
       .then(response => {
         this.setState({
           wishes: response
         })
       })
+      )}
     }
 
     render() {
+      console.log(this.state.wishes)
     return (
         <section className="wishlist">
 
         <NewWish>Add a new Wish🧞</NewWish>
-            {this.state.wishes.length > 0 && (
+            {this.state.wishes && this.state.wishes.length > 0 && (
             <React.Fragment>
               <h1>Wish List {this.state.wishes.length}</h1>
               <ul>
-                {/* {this.state.wishes.map(wish => (
+                {this.state.wishes.map(wish => (
                     <WishItems {...wish} key={wish._id}></WishItems>
-                ))} */}
+                ))}
               </ul>
             </React.Fragment>
             )}
