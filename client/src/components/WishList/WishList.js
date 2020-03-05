@@ -17,7 +17,6 @@ export default class WishList extends React.Component {
     componentDidMount() {
       this.service.getAllWishes()
       .then(response => {
-        console.log(response)
         this.setState({
           wishes: response
         })
