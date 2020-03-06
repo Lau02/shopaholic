@@ -25,7 +25,7 @@ class Navbar extends Component {
         {/* <image src="/public/images/pinklogo.png" width= "100"></image> */}
           <ul>
             <li>
-              <a onClick={this.handleLogout}>Logout</a>
+              <button onClick={this.handleLogout}>Logout</button>
             </li>
           </ul>
 
@@ -46,6 +46,10 @@ class Navbar extends Component {
               <li>
                 <Link to="/login">Login</Link>
               </li>
+              <li>
+              <button onClick={this.handleLogout}>Logout</button>
+              </li>
+
             </ul>
           </nav>
         </div>

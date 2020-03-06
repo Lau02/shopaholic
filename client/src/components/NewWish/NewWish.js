@@ -1,10 +1,13 @@
 import React, { Component } from 'react';
 import WishesService from '../../services/WishesService'
+
+
 class NewWish extends Component {
+
 
   constructor(props){
       super(props);
-         this.state = { 
+        this.state = { 
         title: '',
         description: '',
         price: 0,
@@ -12,27 +15,29 @@ class NewWish extends Component {
         deadline: '',
         image:'',
         wishGranted:''
-      };
-      this.service = new WishesService();
+      };      
+     this.service = new WishesService();
   }
 
   handleFormSubmit = (event) => {
       console.log(event)
       event.preventDefault();
-      const title = this.setState.title;
-      const description = this.setState.description;
-      const price = this.setState.price;
-      const date = this.setState.date;
-      const deadline = this.setState.deadline;
-      const image = this.setState.image;
-      const wishGranted = this.setState.wishGranted;
+      const title = this.state.title;
+      const description = this.state.description;
+      const price = this.state.price;
+      const date = this.state.date;
+      const deadline = this.state.deadline;
+      const image = this.state.image;
+      const wishGranted = this.state.wishGranted;
 
 
       console.log(this.state, title, description, price, image)
 
 
-      this.service.newWish(title, description, price, date, deadline, wishGranted)
-      .then( response => {
+      this.service.getNewWish(this.state)
+      .then(response => {
+        console.log('then')
+        console.log(response)
           this.setState({
             title: '',
             description: '',
@@ -42,9 +47,10 @@ class NewWish extends Component {
             image:'',
             wishGranted:'' 
           })
-          this.props.getNewWish(response.wish)
         })
           .catch(error => {
+            console.log('catch')
+            console.log(error)
               this.setState({
             title: title,
             description: description,
@@ -69,28 +75,28 @@ class NewWish extends Component {
   render(){
     return (
       <div>
-      <h3>introduce a new wish</h3>
+      <h1>Add a new wish</h1>
       <form onSubmit={this.handleFormSubmit}>
-          <label>Title:</label>
-          <input type="text" name="title" value={this.state.title} />
+          <label className="quetepintes">Title:</label>
+          <input type="text" name="title" value={this.state.title} placeholder="title"  onChange={this.handleChange}/>
 
-          <label>Description:</label>
-          <input type="text" name="description" value={this.state.description} />
+          <label className="quetepintes">Description:</label>
+          <input type="text" name="description" value={this.state.description} placeholder="description"  onChange={this.handleChange}/>
 
-          <label>Price:</label>
-          <input type="text" name="price" checked={this.state.price} />
+          <label className="quetepintes">Price:</label>
+          <input type="number" name="price" checked={this.state.price} placeholder="price"  onChange={this.handleChange}/>
           
-          <label>date</label>
-          <input type="text" name="date" value={this.state.date} />
+          <label className="quetepintes">date</label>
+          <input type="text" name="date" value={this.state.date} placeholder="date"  onChange={this.handleChange}/>
 
-          <label>deadline</label>
-          <input type="text" name="deadline" value={this.state.deadline} />
+          <label className="quetepintes">deadline</label>
+          <input type="text" name="deadline" value={this.state.deadline} placeholder="deadline"  onChange={this.handleChange}/>
 
-          <label>Image</label>
-          <input type="text" name="image" value={this.state.image} />
+          <label className="quetepintes">Image</label>
+          <input type="text" name="image" value={this.state.image} placeholder="image"  onChange={this.handleChange}/>
           
-          <label>Wish Granted:</label>
-          <input type="text" name="wishGranted" value={this.state.wishGranted} />
+          <label className="quetepintes">Wish Granted:</label>
+          <input type="text" name="wishGranted" value={this.state.wishGranted} placeholder="add the link to shop your wish 😄" onChange={this.handleChange}/>
           
           <input type="submit" value="Submit" />
       </form>

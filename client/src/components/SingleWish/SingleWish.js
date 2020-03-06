@@ -1,6 +1,5 @@
 import React from 'react';
 import WishesService from '../../services/WishesService';
-import { Link } from 'react-router-dom';
 
 export default class SingleWish extends React.Component {
   constructor(props){
@@ -15,7 +14,9 @@ export default class SingleWish extends React.Component {
     console.log(this.props.match.params)
     this.service.getOneWish()
     .then(response => {
-      //set state
+      this.setState({
+        wish: response
+      })
       console.log(response)
     })
   }

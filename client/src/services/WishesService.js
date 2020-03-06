@@ -12,8 +12,9 @@ class Service {
     .then(response => response.data)
   }
 
-  newWish = (title, description, price, date, deadline, wishGranted) => {
-    return this.service.post('/new', {title, description, price, date, deadline, wishGranted})
+  //wish is a parameter (a keyword) that this method received 
+  getNewWish = (wish) => {
+    return this.service.post('/new', wish)
     .then(response => response.data)
   }
 
@@ -22,7 +23,20 @@ class Service {
     return this.service.get('/' + id)
     .then(response => response.data)
   }
+
+  updateOneWish = (id) => {
+    return this.service.put('/:id')
+    .then(response => response.data)
+  }
+
+  deleteOneWish = (id) => {
+    return this.service.delete('/:id')
+    .then(response => response.data)
+  }
+
+
 }
+
 
 
 

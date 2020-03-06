@@ -5,10 +5,10 @@
     justify-content: space-between;
     align-items: center;
 
-
-    // background-image: "/public/images/12394150-ilustracion-vectorial-de-tres-mujeres-jovenes-con-sus-bolsas-de-compras-de-cada-mujer-se-agrupan-y-s.jpg";
-    // background-size: cover;
-    // background-repeat: no-repeat;
+    .shopaholics{
+      padding: 10px;
+    }
+    
 
     #logo-title{
       background-color: #af224d;
@@ -25,28 +25,58 @@
     header {
         background-image: "/images/stop2.png";
         background-color: #DF7B42;
-        min-height: 100vh;
         display: flex;
         flex-direction: flex;
         align-items: center;
-        justify-content: top;
+        justify-content: space-between;
         font-size: calc(10px + 2vmin);
-        color: white;
+        color: #f5fbf9;
+        
+        a{
+          color: #f5fbf9;
+        }
       }
-      
-      h3{
+        
+    }
+      form {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+
+        input{
+        color: #f5fbf9;
+        font-size: 0.8em;
+        width: 40vw;
+      }
+
+      .submit{
+        text-align: center; 
+      }
+      .quetepintes{
+        color:#af224d;
+        display: flex;
+        padding: 10px;
+      }
+    }
+    
+      h1, h2, h3{
         color: #af224d;
+        align-items: center;
+        text-align: center;
       }
       
       a {
-        color: white;
+        color: black;//white;
         cursor: pointer;
       }
       nav{
         font-display: flex;
+        max-width: 600px;
         justify-content: space-between;
         align-items: flex-end;
         width: 100vw;
+        border:2px solid  rgb(241, 169, 205);
+        
         background-color:#af224d;
       }
        ul{
@@ -62,9 +92,14 @@
         justify-content: space-between;
 
       }
-      
-  }
-
+      h1.error{
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        text-align: center;
+        color:rgb(214, 30, 30);
+      }
+    
   
 //   .App-logo {
 //     animation: App-logo-spin infinite 20s linear;
@@ -77,6 +112,7 @@
   
   
   fieldset {
+    color: #af224d;
     border: 0;
   }
   

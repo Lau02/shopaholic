@@ -2,7 +2,7 @@ import React from 'react';
 import "./WishList.scss";
 import WishItems from "../WishItems/WishItems";
 import WishesService from '../../services/WishesService';
-import NewWish from '../NewWish/NewWish';
+import { Link } from 'react-router-dom';
 
 
 export default class WishList extends React.Component {
@@ -15,22 +15,19 @@ export default class WishList extends React.Component {
     }
 
     componentDidMount() {
-      {this.state.wishes.length === 0 && (
         this.service.getAllWishes()
-      .then(response => {
-        this.setState({
-          wishes: response
+        .then(response => {
+          this.setState({
+            wishes: response
+          })
         })
-      })
-      )}
     }
 
     render() {
-      console.log(this.state.wishes)
     return (
         <section className="wishlist">
 
-        <NewWish>Add a new Wish🧞</NewWish>
+          <Link className="linknew"to={'/new'}>New Wish</Link>
             {this.state.wishes && this.state.wishes.length > 0 && (
             <React.Fragment>
               <h1>Wish List {this.state.wishes.length}</h1>

@@ -50,23 +50,24 @@ handleChange = (event) => {
 render() {
   return(
     <div>
-      <h3>Welcome!,to stop being a compulsive shopper create an account next:</h3>
+      <h2>Welcome!</h2>
+      <h3>to stop being a compulsive shopper create an account next:</h3>
 
       <form onSubmit={this.handleFormSubmit}>
         <fieldset>
-          <label>Username </label>
+          <label className="quetepintes">Username </label>
           <input class="input-signup" type="text" name="username" value={this.state.username} onChange={ e => this.handleChange(e)}/>
         </fieldset>
         
         <fieldset>
-          <label>Password   </label>
+          <label className="quetepintes">Password   </label>
           <input class="input-signup" type="password" name="password" value={this.state.password} onChange={ e => this.handleChange(e)} />
         </fieldset>
         
         <input class="submit" type="submit" value="Sign up" />
       </form>
 
-      <h1>{this.state.error ? 'Error' : ''}</h1>
+      <h1 className="error">{this.state.error ? 'Error' : ''}</h1>
     </div>
   )
 }
