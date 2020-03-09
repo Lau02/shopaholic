@@ -56,15 +56,15 @@ render() {
       <form onSubmit={this.handleFormSubmit}>
         <fieldset>
           <label className="quetepintes">Username </label>
-          <input class="input-signup" type="text" name="username" value={this.state.username} onChange={ e => this.handleChange(e)}/>
+          <input className="input-signup" type="text" name="username" value={this.state.username} onChange={ e => this.handleChange(e)}/>
         </fieldset>
         
         <fieldset>
           <label className="quetepintes">Password   </label>
-          <input class="input-signup" type="password" name="password" value={this.state.password} onChange={ e => this.handleChange(e)} />
+          <input className="input-signup" type="password" name="password" value={this.state.password} onChange={ e => this.handleChange(e)} />
         </fieldset>
         
-        <input class="submit" type="submit" value="Sign up" />
+        <input className="submit" type="submit" value="Sign up" />
       </form>
 
       <h1 className="error">{this.state.error ? 'Error' : ''}</h1>

@@ -1,6 +1,13 @@
 import React from 'react';
 import WishesService from '../../services/WishesService';
 
+
+// import Container from 'react-bootstrap/Container'
+// import Row from 'react-bootstrap/Row'
+// import Col from 'react-bootstrap/Col'
+// import Button from 'react-bootstrap/Button'
+
+
 export default class SingleWish extends React.Component {
   constructor(props){
     super(props)
@@ -9,6 +16,15 @@ export default class SingleWish extends React.Component {
       wish: {}
     }
   }
+
+  // componentDidMount = () => this.getOneWish()
+
+  // getOneWish = () => {
+  //   this.service.getOneWish(this.props.match.params.id)
+  //   .then(theWish => this.setState({wish: theWish}))
+  //   .catch(err => console.log(err))
+  // }
+
 
   componentDidMount(){
     console.log(this.props.match.params)
@@ -23,16 +39,42 @@ export default class SingleWish extends React.Component {
 
   render() {
     return (
-      <div className="singlewish">
-        {/* <img src={this.props.wish.image} /> */}
-        <p className="image">{this.props.wish.image}</p>
-        <p className="title">{this.props.wish.name}</p>
-        <p className="descrption">{this.props.wish.description}</p>
-        <p className="price">{this.props.wish.price}</p>
-        <p className="date">{this.props.wish.date}</p>
-        <p className="deadline">{this.props.wish.deadline}</p>
-       <p className="wishgranted">{this.props.wish.wishGranted}</p>
-      </div>
-    )
-  }
+      <section className="singlewish">
+      
+        <h1>{this.state.wish.title}</h1>
+        
+          
+            <h2 className="descrption:">Description:{this.state.wish.description}</h2>
+            <h2 className="price:">Price:{this.state.wish.price}</h2>
+            <h2 className="date:">Date:{this.state.wish.date}</h2>
+            <h2 className="deadline:">Deadline:{this.state.wish.deadline}</h2>
+            <h2 className="wishgranted:">Wish granted:{this.state.wish.wishGranted}</h2>
+         
+          <h2 className="image">{this.state.wish.image}</h2> 
+          
+       
+      </section>
+    ) 
+}
+
+// render() {
+//   return (
+//     <Container className="singlewish">
+    
+//       <h1>{this.state.wish.title}</h1>
+//       <Row>
+//         {/* <Col md={{ span: 4, offset: 1 }}> */}
+//           <h2 className="descrption:">Description:{this.state.wish.description}</h2>
+//           <h2 className="price:">Price:{this.state.wish.price}</h2>
+//           <h2 className="date:">Date:{this.state.wish.date}</h2>
+//           <h2 className="deadline:">Deadline:{this.state.wish.deadline}</h2>
+//           <h2 className="wishgranted:">Wish granted:{this.state.wish.wishGranted}</h2>
+//         {/* </Col> */}
+
+//         {/* <Col md={{ span: 5, offset: 1 }}> */}
+//         <h2 className="image">{this.state.wish.image}</h2> 
+//         {/* </Col> */}
+//      </Row>
+//     </Container>
+//   )
 }

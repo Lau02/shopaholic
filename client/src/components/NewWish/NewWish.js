@@ -1,6 +1,6 @@
 import React, { Component } from 'react';
 import WishesService from '../../services/WishesService'
-
+import { Link } from 'react-router-dom';
 
 class NewWish extends Component {
 
@@ -29,10 +29,6 @@ class NewWish extends Component {
       const deadline = this.state.deadline;
       const image = this.state.image;
       const wishGranted = this.state.wishGranted;
-
-
-      console.log(this.state, title, description, price, image)
-
 
       this.service.getNewWish(this.state)
       .then(response => {
@@ -75,6 +71,7 @@ class NewWish extends Component {
   render(){
     return (
       <div>
+      <Link to={`/user/${this.props.userInSession._id}`}>Back to your Wishes</Link>
       <h1>Add a new wish</h1>
       <form onSubmit={this.handleFormSubmit}>
           <label className="quetepintes">Title:</label>

@@ -13,13 +13,14 @@ const schemaWish = new Schema({
         type: Number,
     },
     date: {
-        type: Date
+        type: String
     },
     deadline: {
-        type: Date
+        type: String
     },
     image: String,
     wishGranted: String,
+    user: {type: Schema.Types.ObjectId, ref: 'User'}
 })
 
 const Model = mongoose.model("Wish", schemaWish);

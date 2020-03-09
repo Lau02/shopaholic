@@ -4,8 +4,9 @@ const Wish = require('../../models/Wish')
 
 //Mostrar todos 🆗
 router.get('/all', (req, res, next) => {
- Wish.find()
+ Wish.find({user:req.user._id})
     .then(allWishes => {
+      console.log(allWishes)
       res.json(allWishes)
     })
     .catch(err => next(err))
@@ -34,7 +35,22 @@ router.put("/:id", (req, res, next) => {
 //Crear 🆗
 
 router.post("/new", (req, res, next) => {
-  return Wish.create(req.body)
+
+  console.log(req.body, req.user)
+  
+  const newWish = {
+    title: req.body.name,
+    description: req.body.description,
+    price: req.body.price,
+    date: req.body.date,
+    deadline: req.body.deadline,
+    image: req.body.image,
+    wishGranted: req.body.wishGranted,
+    user: req.user._id
+  }
+
+
+  return Wish.create(newWish)
   .then(createdWish => {
     res.json(createdWish)
   });

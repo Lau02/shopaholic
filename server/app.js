@@ -77,4 +77,39 @@ app.use((req, res) => {
   res.sendFile(__dirname + "/public/index.html");
 })
 
+///////////
+// const passport = require("passport");
+// const User = require("./models/User");
+
+// const SlackStrategy = require("passport-slack").Strategy;
+
+// passport.use(
+//   new SlackStrategy(
+//     {
+//       clientID: 2432150752.987366039589,
+//       clientSecret: f4d5c811c8d362693c427e087c69ad76,
+//       callbackURL: "/auth/slack/callback"
+//     },
+//     (accessToken, refreshToken, profile, done) => {
+//       // to see the structure of the data in received response:
+//       console.log("Slack account details:", profile);
+
+//       User.findOne({ slackID: profile.id })
+//         .then(user => {
+//           if (user) {
+//             done(null, user);
+//             return;
+//           }
+
+//           User.create({ slackID: profile.id })
+//             .then(newUser => {
+//               done(null, newUser);
+//             })
+//             .catch(err => done(err)); // closes User.create()
+//         })
+//         .catch(err => done(err)); // closes User.findOne()
+//     }
+//   )
+// );
+//////&
 module.exports = app;

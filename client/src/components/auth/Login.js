@@ -7,6 +7,9 @@ class Login extends Component {
     super(props);
     this.state = { username: '', password: '' };
     this.service = new AuthService();
+
+    console.log(props)
+
   }
 
   handleFormSubmit = (event) => {
@@ -23,7 +26,7 @@ class Login extends Component {
         });
 
         this.props.getUser(response)
-        // .then(_ => this.props.history.push("/"))
+        this.props.history.push(`/user/${response._id}`)
       })
       .catch(error => {
         this.setState({

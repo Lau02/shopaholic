@@ -21,6 +21,20 @@ const login = (req, user) => {
   })
 }
 
+/////////////////**
+// routes/auth-routes.js
+
+// const passport = require("passport");
+
+// router.get("/api/slack", passport.authenticate("slack"));
+// router.get(
+//   "/auth/slack/callback",
+//   passport.authenticate("slack", {
+//     successRedirect: "/private-page",
+//     failureRedirect: "/" // here you would navigate to the classic login page
+//   })
+// );
+//////////
 
 // SIGNUP
 router.post('/signup', (req, res, next) => {

@@ -2,29 +2,55 @@
     font-family: 'Raleway', sans-serif;
     display: flex;
     flex-direction: column;
-    justify-content: space-between;
     align-items: center;
+    background-image:url('/images/background.jpg');
+    background-repeat: no-repeat;
+    background-size: cover;
+    min-height: 100vh;
 
-    .shopaholics{
-      padding: 10px;
+    main {
+      padding: 3rem; 
+      width: 100%;
+      height: 100%;
+      div.finances{
+        display: flex;
+        flex-direction: column;
+        justify-content: flex-end;
+      }
+      .button .is-large{
+        color:#af224d;
+      }
     }
-    
+
+    h1{
+      font-size: 3em;
+    }
 
     #logo-title{
       background-color: #af224d;
+      height:100px ;
     }
     div .logo{
       width: 100vw;
-      
+    }
+
+    div.app{
+      height: 100%;
     }
     img{
         display: flex;
         align-items: flex-start;
         width: 4em;
     }
+    img.img-home1{
+      margin-top: 6em;
+      width: 400px;   
+ }
+ 
+
     header {
         background-image: "/images/stop2.png";
-        background-color: #DF7B42;
+        background-color:#f5fbf9;
         display: flex;
         flex-direction: flex;
         align-items: center;
@@ -32,12 +58,31 @@
         font-size: calc(10px + 2vmin);
         color: #f5fbf9;
         
+
+        .shopaholic{ 
+          color:#ed1818;
+          }
+        }
+        .signup .login{
+          display: flex;
+          justify-content: space-between;
+          flex-direction: row;
+        }
+        
         a{
           color: #f5fbf9;
+          display: flex;
+          justify-content: end;
         }
+        li a{
+          display: flex;
+          justify-content: end;
+          align-items: flex-end;
+        }
+      
       }
         
-    }
+    
       form {
         display: flex;
         flex-direction: column;
@@ -71,14 +116,21 @@
       }
       nav{
         font-display: flex;
-        max-width: 600px;
-        justify-content: space-between;
-        align-items: flex-end;
+        max-width: 1000px;
+        justify-content: space-arround;
+        align-items: center;
         width: 100vw;
-        border:2px solid  rgb(241, 169, 205);
-        
+        border:2px solid  #f1a9cd;
+        border-radius: 5px;
         background-color:#af224d;
+
+        .logout{
+          color:#af224d;
+          border-radius: 5px;
+          margin-top: 20px;
+        }
       }
+
        ul{
           list-style: none; 
           a{
@@ -97,14 +149,33 @@
         justify-content: center;
         align-items: center;
         text-align: center;
-        color:rgb(214, 30, 30);
+        color:#ed1818;
       }
+
+      .wish-row{
+        display: flex;
+        justify-content: space-between;
+        align-items: flex-end;
+      }
+
+      div.home{
+        display: flex;
+        justify-content: space-arround;
+        align-items: center;
+      }
+      
+        .wishlist{
+          display: row;
+          justify-content: flex-start;
+        }
+        
+      
     
   
-//   .App-logo {
-//     animation: App-logo-spin infinite 20s linear;
-//     height: 40vmin;
-//   }
+  .App-logo {
+    animation: App-logo-spin infinite 20s linear;
+    height: 40vmin;
+  }
   
   .App-link {
     color: #61dafb;
@@ -124,5 +195,11 @@
       transform: rotate(360deg);
     }
   }
-  
-  /* color: #950622; #f38aab; #f5fbf9 */
+
+  a.wish-row{
+    color: #000000;
+  }
+
+
+
+  /* color: #950622; #f38aab; #f5fbf9 ;#f1a9cd; #ed1818*/
