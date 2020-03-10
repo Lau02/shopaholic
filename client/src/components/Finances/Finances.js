@@ -7,25 +7,22 @@ class Finances extends Component {
         super(props);
         this.state = {
             saving: '',
-            user: '',
-            total: ''
+            totalSavings: null
         }
         this.service = new FinancesService();
     }
 
-    
-    
     componentDidMount(){
-        this.service.getAllSavings()
+        console.log('component did mount')
+        const userId = this.props.match.params.id
+        this.service.getAllSavings(userId)
         .then(response => {
+            console.log(response)
             this.setState({
-                savings: response
+                totalSavings: this.props.sumAllSavings(response)
             })
-    })
-}
-
-    
-
+        })
+    }
 
     handleSaving = (event) => {
         this.setState({
@@ -37,22 +34,19 @@ class Finances extends Component {
         event.preventDefault();
        this.service.getNewSaving(this.state)
        .then(_ => {
-        this.setState({
-            saving:'',
-            uaser: ''  
-       })  
-    })
+            this.setState({
+                saving:'',
+            })  
+        })
     }
-
-
-
     
     render(){
+        console.log('render')
         return (
             <div className="finances">
                 <h1>Hola soy tus finanzas</h1>
-                <p>Total: <span>{this.state.total} €</span></p>
-               <h2>Saved until today:  {/* { ...this.state, loggedInUser: nextProps["userInSession"] }*/}</h2> 
+
+               <h2>Saved until today:<span>{this.state.totalSavings} €</span></h2> 
                     <form onSubmit={this.handleSubmit}>
 
                    <label>Add new saving:</label>

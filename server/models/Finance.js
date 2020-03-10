@@ -4,6 +4,7 @@ const Schema   = mongoose.Schema;
 const financeSchema = new Schema({
   saving: Number,
   user: {type: Schema.Types.ObjectId, ref: 'User'},
+
   
 });
 

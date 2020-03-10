@@ -53,6 +53,15 @@ class App extends Component {
       });
   }
 
+   sumAllSavings = (savings) => {
+     console.log(savings)
+      let allSaving = savings.reduce((ac, cu) => {
+          return cu.saving && ac + cu.saving;
+      })
+      console.log(allSaving)
+      return allSaving;
+  }
+
   render() {
     //aqui hacemos rendering condicional dependiendo de si tenemos un usuario logeado o no
     if (this.state.loggedInUser) {
@@ -71,7 +80,7 @@ class App extends Component {
               <main>
                 <Switch>
                   <Route path="/new" exact render={() => <NewWish userInSession={this.state.loggedInUser}></NewWish>}></Route>
-                  <Route exact path="/user/:id" render={() => <AdminPanel></AdminPanel>}></Route>
+                  <Route exact path="/user/:id" render={(props) => <AdminPanel {...props} sumAllSavings={(savings) => this.sumAllSavings(savings)}></AdminPanel>}></Route>
                   <Route exact path="/wishes/:id" render ={(props) => <SingleWish {...props}></SingleWish>}></Route>
                 </Switch>
               </main>

@@ -8,8 +8,8 @@ class Service {
     });
   }
 
-  getAllSavings = () => {
-    return this.service.get('/all')
+  getAllSavings = (userId) => {
+    return this.service.get(`/all/${userId}`)
     .then(response => response.data)
   }
 
