@@ -7,21 +7,11 @@ export default class WishItems extends React.Component {
     render() {
         console.log(this.props._id)
         return (
-            <div>
-            
-                <ul>
-                    <li>
-                    
-                       <Link className="wish-row"to={`/wishes/${this.props._id}`}>
-                       <td><img src={this.props.image}  alt=""/></td> 
-                       <td className="title-row">{this.props.title} </td> 
-                       <td className="price-row">price:{this.props.price}€ </td>
-                        
-                        </Link>
-                       
-                    </li>
-                </ul>
-            </div>
+            <Link className="wish-list"to={`/wishes/${this.props._id}`}>
+                <img src={this.props.image}  alt=""/> 
+                <h3 className="title-row">{this.props.title} </h3> 
+                <p className="price-row">{this.props.price}€ </p>
+            </Link>
         )
     }
 }

@@ -1,6 +1,6 @@
 import React, { Component } from "react";
 import { Link } from "react-router-dom";
-import AuthService from "../../services/AuthService";
+//import AuthService from "../../services/AuthService";
 import "./Navbar.scss";
 
 class Navbar extends Component {
@@ -16,6 +16,7 @@ class Navbar extends Component {
     if (this.props.userInSession) {
       return (
         <nav className="nav-style">
+              <h4>Welcome {this.props.userInSession.username}</h4>
          
               <button
                 className="button is-large has-text-weight-bold"
@@ -23,7 +24,6 @@ class Navbar extends Component {
               >
                 Logout
               </button>
-              <p>{this.props.userInSession.username}</p>
         </nav>
       );
     } else {

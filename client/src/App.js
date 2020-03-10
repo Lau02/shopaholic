@@ -13,6 +13,7 @@ import NewWish from "./components/NewWish/NewWish";
 import AuthService from "./services/AuthService";
 import Footer from "./components/Footer/Footer";
 import AdminPanel from "./components/AdminPanel/AdminPanel";
+import SingleWish from "./components/SingleWish/SingleWish";
 
 
 class App extends Component {
@@ -71,6 +72,7 @@ class App extends Component {
                 <Switch>
                   <Route path="/new" exact render={() => <NewWish userInSession={this.state.loggedInUser}></NewWish>}></Route>
                   <Route exact path="/user/:id" render={() => <AdminPanel></AdminPanel>}></Route>
+                  <Route exact path="/wishes/:id" render ={(props) => <SingleWish {...props}></SingleWish>}></Route>
                 </Switch>
               </main>
           

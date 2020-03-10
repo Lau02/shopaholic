@@ -33,13 +33,6 @@ class Service {
     return this.service.delete('/:id')
     .then(response => response.data)
   }
-
-
 }
-
-
-
-
-
 
 export default Service;

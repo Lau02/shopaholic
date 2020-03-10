@@ -15,6 +15,8 @@ router.get('/all', (req, res, next) => {
 
 //Mostrar uno 🆗
 router.get('/:id', (req, res, next) => {
+  console.log(req.params.id)
+  console.log("hola")
   Wish.findById(req.params.id)
     .then(oneWish => {
       res.json(oneWish)
@@ -39,7 +41,7 @@ router.post("/new", (req, res, next) => {
   console.log(req.body, req.user)
   
   const newWish = {
-    title: req.body.name,
+    title: req.body.title,
     description: req.body.description,
     price: req.body.price,
     date: req.body.date,

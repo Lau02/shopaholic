@@ -1,7 +1,6 @@
 import React, { Component } from 'react';
 import { Link } from "react-router-dom";
-import WishList from '../../components/WishList/WishList'
-import Finances from '../Finances/Finances'
+
 
 class Home extends Component {
   render() {
@@ -17,7 +16,9 @@ class Home extends Component {
               <div className="img-home">
                 <img className="img-home1" src="/images/mujer-feliz-tirar-dinero-ilustracion-estilo-retro-pop-art-burbuja-dialogo_88813-219.jpg" alt=""></img>
                 {/* <img className="img-home2" src="/images/92684739-o-homem-de-negócios-e-o-dinheiro-chovem-a-ilustração-retro-do-vetor-do-pop-art-imitação-de-estilo-de-quadri.jpg" alt=""></img> */}
+                
               </div>
+              
       </div> 
     </React.Fragment>
   )}

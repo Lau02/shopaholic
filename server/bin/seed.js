@@ -2,7 +2,8 @@ require('dotenv').config();
 const mongoose = require("mongoose");
 const bcrypt = require("bcrypt");
 const User = require("../models/User");
-const Wish = require('../models/Wish')
+const Wish = require('../models/Wish');
+const Finance = require('../models/Finance');
 const bcryptSalt = 10;
 
 userId1 = new mongoose.mongo.ObjectID();
@@ -29,11 +30,13 @@ let users = [
     _id: userId1,
     username: "lau",
     password: bcrypt.hashSync("lau", bcrypt.genSaltSync(bcryptSalt)),
+    saving: 700
   },
   {
     _id: userId2,
     username: "julio",
     password: bcrypt.hashSync("julio", bcrypt.genSaltSync(bcryptSalt)),
+    saving: 2300
   }
 ]
 

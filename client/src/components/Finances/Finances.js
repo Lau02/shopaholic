@@ -1,39 +1,51 @@
 import React, {Component} from 'react';
+import FinancesService from '../../services/FinancesService';
 
 class Finances extends Component {
 
-    sumar =  () => {
-        let total = 0;	
-        let valor = parseInt(valor);         
-        total = document.getElementById('spTotal').innerHTML;
-        total = (total == null || total == undefined || total == "") ? 0 : total;
-        total = (parseInt(total) + parseInt(valor));
-        document.getElementById('spTotal').innerHTML = total;
+    constructor(props){
+        super(props);
+        this.state = {
+            saving: '',
+            user: '',
+        }
+        this.service = new FinancesService();
     }
+   
+
+    handleSaving = (event) => {
+        console.log(event)
+        this.setState({
+            saving: event.target.value
+        })
+    }
+
+    handleSubmit = (event) => {
+        event.preventDefault();
+       
+        this.setState({
+            saving:'',
+            uaser: ''
+        })
+        
+        }
+
     
     render(){
         return (
-            
-
             <div className="finances">
-                Hola soy tus finanzas
-                <h2>Saved until today: </h2>
-   
-                    <span>Valor #1</span>
-                    <input type="text" id="txt_campo_1" onchange="sumar(this.value);" />
-                    <br/>
-                    <span>Valor #2</span>
-                    <input type="text" id="txt_campo_2" onchange="sumar(this.value);" />
-                    <br/>
-                    <span>Valor #3</span>
-                    <input type="text" id="txt_campo_3" onchange="sumar(this.value);" />
-                    <br/>
-                    <span>El resultado es: </span> <span id="spTotal"></span>
-                    
+                <h1>Hola soy tus finanzas</h1>
+               <h2>Saved until today:  {/* { ...this.state, loggedInUser: nextProps["userInSession"] }*/}</h2> 
+                    <form onSubmit={this.handleSubmit}>
+
+                   <label>Add new saving:</label>
+                    <input type="text"  name="saving" value={this.state.saving} placeholder="new saving" onChange={(e) => this.handleSaving(e)}/>
+                    <input type="submit" value="Submit" />   
+                    </form> 
              </div>   
            ) 
         
     }
-}
 
-export default Finances;
+}
+export default Finances; 

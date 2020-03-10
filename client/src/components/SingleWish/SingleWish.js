@@ -27,8 +27,7 @@ export default class SingleWish extends React.Component {
 
 
   componentDidMount(){
-    console.log(this.props.match.params)
-    this.service.getOneWish()
+    this.service.getOneWish(this.props.match.params.id)
     .then(response => {
       this.setState({
         wish: response
@@ -40,6 +39,8 @@ export default class SingleWish extends React.Component {
   render() {
     return (
       <section className="singlewish">
+        <h1>Vista deseo individual</h1>
+
       
         <h1>{this.state.wish.title}</h1>
         

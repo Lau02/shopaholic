@@ -29,20 +29,14 @@ export default class WishList extends React.Component {
           {/* <h2>Binevenido a tu Area privada {this.props.lggedname}</h2> */}
           <Link className="linknew"to={'/new'}>New Wish</Link>
             {this.state.wishes && this.state.wishes.length > 0 && (
-            <React.Fragment>
-              <h1>Your Wish List </h1>
-                <table className=" table is-striped">
-                <tr>
-                <td>
-                {this.state.wishes.map(wish => (
-                    <WishItems {...wish} key={wish._id}></WishItems>
-                ))}
-                </td>
-                </tr>
-                
-              
-              </table>
-            </React.Fragment>
+              <React.Fragment>
+                <h1>Your Wish List </h1>
+                    <div className=" table is-striped">
+                    {this.state.wishes.map(wish => (
+                        <WishItems {...wish} key={wish._id}></WishItems>
+                    ))}
+                  </div>
+              </React.Fragment>
             )}
         </section>
     )

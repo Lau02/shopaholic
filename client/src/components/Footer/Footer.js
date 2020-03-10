@@ -4,7 +4,17 @@ import './Footer.scss'
 export default function Footer() {
     return (
         <footer className="footer-container">
-            <div>Holi soy tu footer</div>
+            <div className="share">
+                <h4>Share</h4>
+                <a className="whatsapp" href="whatsapp://send?text=texto que quieras compartir" data-action="share/whatsapp/share" alt=""> <img src="/images/whatsapp-icone.png"></img> </a>
+            </div>
+            <div className="copyright">
+                <h5>© Shopaholics & co</h5>
+            </div>
+            <div>
+                Contact
+            </div>
+
         </footer>   
     )
 }
