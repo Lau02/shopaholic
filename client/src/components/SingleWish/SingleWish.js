@@ -1,6 +1,6 @@
 import React from 'react';
 import WishesService from '../../services/WishesService';
-
+import { Link } from 'react-router-dom';
 
 // import Container from 'react-bootstrap/Container'
 // import Row from 'react-bootstrap/Row'
@@ -32,26 +32,23 @@ export default class SingleWish extends React.Component {
       this.setState({
         wish: response
       })
-      console.log(response)
     })
   }
 
   render() {
     return (
       <section className="singlewish">
-        <h1>Vista deseo individual</h1>
 
-      
         <h1>{this.state.wish.title}</h1>
-        
-          
-            <h2 className="descrption:">Description:{this.state.wish.description}</h2>
+        <img src={this.props.image}  alt=""/> 
+            
+            <h3 className="descrption:">Description:{this.state.wish.description}</h3>
             <h2 className="price:">Price:{this.state.wish.price}</h2>
             <h2 className="date:">Date:{this.state.wish.date}</h2>
             <h2 className="deadline:">Deadline:{this.state.wish.deadline}</h2>
-            <h2 className="wishgranted:">Wish granted:{this.state.wish.wishGranted}</h2>
+            <h2 className="wishgranted:">Wish granted: </h2><Link to={this.state.wish.wishGranted}>🧞</Link>
          
-          <h2 className="image">{this.state.wish.image}</h2> 
+          
           
        
       </section>

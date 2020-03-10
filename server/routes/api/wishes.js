@@ -6,17 +6,15 @@ const Wish = require('../../models/Wish')
 router.get('/all', (req, res, next) => {
  Wish.find({user:req.user._id})
     .then(allWishes => {
-      console.log(allWishes)
+      
       res.json(allWishes)
     })
     .catch(err => next(err))
-  console.log('error');
 })
 
 //Mostrar uno 🆗
 router.get('/:id', (req, res, next) => {
-  console.log(req.params.id)
-  console.log("hola")
+
   Wish.findById(req.params.id)
     .then(oneWish => {
       res.json(oneWish)
@@ -37,8 +35,6 @@ router.put("/:id", (req, res, next) => {
 //Crear 🆗
 
 router.post("/new", (req, res, next) => {
-
-  console.log(req.body, req.user)
   
   const newWish = {
     title: req.body.title,

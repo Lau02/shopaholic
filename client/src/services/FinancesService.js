@@ -7,6 +7,12 @@ class Service {
       withCredentials: true
     });
   }
+
+  getAllSavings = () => {
+    return this.service.get('/all')
+    .then(response => response.data)
+  }
+
   getNewSaving = (saving) => {
     return this.service.post('/new', saving)
     .then(response => response.data)

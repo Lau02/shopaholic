@@ -1,6 +1,5 @@
 import React, { Component } from "react";
 import { Link } from "react-router-dom";
-//import AuthService from "../../services/AuthService";
 import "./Navbar.scss";
 
 class Navbar extends Component {
@@ -19,7 +18,7 @@ class Navbar extends Component {
               <h4>Welcome {this.props.userInSession.username}</h4>
          
               <button
-                className="button is-large has-text-weight-bold"
+                className="button  has-text-weight-bold"
                 onClick={this.handleLogout}
               >
                 Logout

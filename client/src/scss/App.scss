@@ -54,7 +54,29 @@ align-content: space-between;
         font-size: 1em;
       }
 
+      
     }
+    .Signup-home{
+      width: 20%;
+    padding: 8px 16px;
+    margin-top: 32px;
+    border: 2px solid #f1a9cd;
+    border-radius: 5px;
+    display: block;
+    color: #fff;
+    font-size: 16px;
+    font-weight: bold;
+    background-color: #af224d;
+    text-align: center;
+    }
+.welcome{
+  display: flex;
+	flex-direction: column;
+	flex-wrap: nowrap;
+	justify-content: space-around;
+	align-items: center;
+	align-content: center;
+}
 
   }
 
@@ -247,9 +269,21 @@ div.home {
   display: row;
   justify-content: flex-start;
 }
+.wishitems{
+  display: flex;
+	flex-direction: row;
+	flex-wrap: nowrap;
+	justify-content: space-between;
+	align-items: center;
+  align-content: space-between;
+  p{
+    color:#000000;
+  }
+}
 
-
-
+.singlewish{
+  color:#f5fbf9;
+}
 
 .App-logo {
   animation: App-logo-spin infinite 20s linear;

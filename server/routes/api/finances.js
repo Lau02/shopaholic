@@ -14,23 +14,24 @@ const Finance = require('../../models/Finance');
 //  })
 
 
- router.post("/newSaving", (req, res, next) => {
-   console.log(req.user._id)
+ router.post("/new", (req, res, next) => {
+ 
    const newSaving = {
-   moneybox: req.body.moneybox,
+   saving: req.body.saving,
    user: req.user._id
    }
    return Finance.create(newSaving)
    .then(createdSaving => {
+     console.log(createdSaving)
      res.json(createdSaving)
    });
  });
 
 router.get('/all', (req, res, next) => {
   Finance.find({user:user.req._id})
-  .select(req.body.moneybox)
-  .then(allFinances => {
-    res.json(allFinances)
+  .select(req.body.saving)
+  .then(allSavings => {
+    res.json(allSavings)
 })
   .catch(err => next(err))
 })

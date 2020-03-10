@@ -13,12 +13,10 @@ class Signup extends Component {
   }
     
   handleFormSubmit = (event) => {
-      console.log(event)
     event.preventDefault();
     const username = this.state.username;
     const password = this.state.password;
 
-    console.log(this.state, username, password)
 
     //aquí llamamos al endpoint /signup de nuestra API Rest usando nuestro AuthService
     this.service.signup(username, password)

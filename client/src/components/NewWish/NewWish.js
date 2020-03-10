@@ -20,7 +20,6 @@ class NewWish extends Component {
   }
 
   handleFormSubmit = (event) => {
-      console.log(event)
       event.preventDefault();
       const title = this.state.title;
       const description = this.state.description;
@@ -32,8 +31,6 @@ class NewWish extends Component {
 
       this.service.getNewWish(this.state)
       .then(response => {
-        console.log('then')
-        console.log(response)
           this.setState({
             title: '',
             description: '',
@@ -45,8 +42,6 @@ class NewWish extends Component {
           })
         })
           .catch(error => {
-            console.log('catch')
-            console.log(error)
               this.setState({
             title: title,
             description: description,

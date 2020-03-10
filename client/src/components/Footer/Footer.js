@@ -6,7 +6,7 @@ export default function Footer() {
         <footer className="footer-container">
             <div className="share">
                 <h4>Share</h4>
-                <a className="whatsapp" href="whatsapp://send?text=texto que quieras compartir" data-action="share/whatsapp/share" alt=""> <img src="/images/whatsapp-icone.png"></img> </a>
+                <a className="whatsapp" href="whatsapp://send?text=texto que quieras compartir" data-action="share/whatsapp/share"> <img src="/images/whatsapp-icone.png"  alt=""></img> </a>
             </div>
             <div className="copyright">
                 <h5>© Shopaholics & co</h5>

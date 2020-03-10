@@ -31,10 +31,12 @@ export default class WishList extends React.Component {
             {this.state.wishes && this.state.wishes.length > 0 && (
               <React.Fragment>
                 <h1>Your Wish List </h1>
-                    <div className=" table is-striped">
-                    {this.state.wishes.map(wish => (
-                        <WishItems {...wish} key={wish._id}></WishItems>
-                    ))}
+                  <div className="wishitems">
+                      <div className=" table is-striped">
+                      {this.state.wishes.map(wish => (
+                          <WishItems {...wish} key={wish._id}></WishItems>
+                      ))}
+                    </div>
                   </div>
               </React.Fragment>
             )}
