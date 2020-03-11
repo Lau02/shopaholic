@@ -1,6 +1,6 @@
 import React, { Component } from "react";
 import "./scss/App.scss"
-import { Switch, Route } from "react-router-dom";
+import { Switch, Route, Link } from "react-router-dom";
 
 import Navbar from "./components/navbar/Navbar";
 import Signup from "./components/auth/Signup";
@@ -14,6 +14,7 @@ import AuthService from "./services/AuthService";
 import Footer from "./components/Footer/Footer";
 import AdminPanel from "./components/AdminPanel/AdminPanel";
 import SingleWish from "./components/SingleWish/SingleWish";
+import DeleteWish from "./components/DeleteWish/DeleteWish";
 
 
 class App extends Component {
@@ -62,26 +63,28 @@ class App extends Component {
       return allSaving;
   }
 
+ 
+
   render() {
-    //aqui hacemos rendering condicional dependiendo de si tenemos un usuario logeado o no
     if (this.state.loggedInUser) {
       return (
         <React.Fragment>
           <div className="App">
            
               <header className="App-header">
-                <img src="/images/stop2.png" alt=""></img>
+                <a href='/'><img src="/images/stop2.png" alt=""/></a>
                 <h1 className="shopaholic">Shopaholics</h1>
                 <div className="navbar">
                 <Navbar userInSession={this.state.loggedInUser} logout={this.logout}  {...this.props}/>
                 </div>
               </header>
 
-              <main>
+              <main className="container">
                 <Switch>
                   <Route path="/new" exact render={() => <NewWish userInSession={this.state.loggedInUser}></NewWish>}></Route>
                   <Route exact path="/user/:id" render={(props) => <AdminPanel {...props} sumAllSavings={(savings) => this.sumAllSavings(savings)}></AdminPanel>}></Route>
                   <Route exact path="/wishes/:id" render ={(props) => <SingleWish {...props}></SingleWish>}></Route>
+                  <Route exact patth="/wishes/:id" render ={(props) => <DeleteWish {...props}></DeleteWish>}></Route>
                 </Switch>
               </main>
           

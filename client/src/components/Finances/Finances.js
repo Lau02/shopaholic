@@ -51,7 +51,7 @@ class Finances extends Component {
 
                    <label>Add new saving:</label>
                     <input type="text"  name="saving" value={this.state.saving} placeholder="new saving" onChange={(e) => this.handleSaving(e)}/>
-                    <input type="submit" value="Submit" />   
+                    <input type="submit" value="Submit"/>   
                     </form> 
              </div>   
            ) 

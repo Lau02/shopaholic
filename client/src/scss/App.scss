@@ -1,5 +1,6 @@
 .App {
   font-family: 'Raleway', sans-serif;
+  
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -101,7 +102,11 @@ align-content: space-between;
   img {
     display: flex;
     align-items: flex-start;
-    width: 4em;
+    width: 5em;
+    margin-top: 10px;
+  }
+  img.image-single{
+    width: 2em;
   }
 
   img.img-home1 {
@@ -206,6 +211,17 @@ h3 {
   color: #af224d;
   align-items: center;
   text-align: center;
+  margin-top: 10px;
+}
+h2,h3{
+  font-size: 26px;
+}
+h5 {
+  color:rgb(10, 216, 10);
+  font-size: 26px;
+  align-items: center;
+  text-align: center;
+  margin-top: 10px;
 }
 
 a {

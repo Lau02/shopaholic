@@ -11,7 +11,7 @@ export default class WishItems extends React.Component {
             
                 <img src={this.props.image}  alt=""/> 
                 <h3 className="title-row">{this.props.title} </h3> 
-                <p className="price-row">{this.props.price}€ </p>
+                <h5 className="price-row">{this.props.price}€ </h5>
             </Link>
            
         )

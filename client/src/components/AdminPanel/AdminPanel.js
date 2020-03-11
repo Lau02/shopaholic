@@ -9,11 +9,11 @@ export default function AdminPanel(props) {
     return (
         <div>   
                 <div id="home">
-                {/* <Link to="/auth/slack">Login With Slack</Link> */}
-                <div className="wishlist">
+               
+                <div className="wishlist col-8">
                 <WishList></WishList>
                 </div>
-                <div>
+                <div className="col-4">
                 <Finances sumAllSavings={(savings) => props.sumAllSavings(savings)} {...props}></Finances>
                 </div>
                 
