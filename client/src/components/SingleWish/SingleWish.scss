@@ -7,3 +7,25 @@ h2.price{
 img.image-single{
     width: 2em;
 }
+.hero-single{
+    display: flex;
+	flex-direction: row;
+	flex-wrap: nowrap;
+	justify-content: space-around;
+	align-items: center;
+    align-content: flex-start;
+    margin-top: 100px;
+}
+.container2{
+    margin-right: 100px;
+    margin-left: 100px;
+}
+.container{
+    display: flex;
+	flex-direction: column;
+	flex-wrap: nowrap;
+	justify-content: space-around;
+	align-items: center;
+    align-content: center;
+    
+}

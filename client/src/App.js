@@ -54,15 +54,23 @@ class App extends Component {
       });
   }
 
-   sumAllSavings = (savings) => {
-     console.log(savings)
-      let allSaving = savings.reduce((ac, cu) => {
-          return cu.saving && ac + cu.saving;
-      })
-      console.log(allSaving)
-      return allSaving;
-  }
+  //  sumAllSavings = (savings) => {
+  //    console.log(savings)
+  //     let allSaving = savings.reduce((ac, cu) => {
+  //         return cu.saving && ac + cu.saving;
+  //     })
+  //     console.log(allSaving)
+  //     return allSaving;
+  // }
 
+//   sumAllSavings = (savings) => {
+//     if(savings.length > 0) {
+//      let allSaving = savings.reduce((ac, cu) => {
+//        return cu.saving && ac + cu.saving;
+//      })
+//      return allSaving;
+//    }
+//  }
  
 
   render() {
@@ -82,9 +90,9 @@ class App extends Component {
               <main className="container">
                 <Switch>
                   <Route path="/new" exact render={() => <NewWish userInSession={this.state.loggedInUser}></NewWish>}></Route>
-                  <Route exact path="/user/:id" render={(props) => <AdminPanel {...props} sumAllSavings={(savings) => this.sumAllSavings(savings)}></AdminPanel>}></Route>
+                  <Route exact path="/user/:id" render={(props) => <AdminPanel {...props}></AdminPanel>}></Route>
                   <Route exact path="/wishes/:id" render ={(props) => <SingleWish {...props}></SingleWish>}></Route>
-                  <Route exact patth="/wishes/:id" render ={(props) => <DeleteWish {...props}></DeleteWish>}></Route>
+                  {/* <Route exact patth="/wishes/:id" render ={(props) => <DeleteWish {...props}></DeleteWish>}></Route> */}
                 </Switch>
               </main>
           

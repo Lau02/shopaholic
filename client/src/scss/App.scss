@@ -151,6 +151,17 @@ align-content: space-between;
     color: #f5fbf9;
     display: flex;
     justify-content: end;
+    
+  }
+  .linknew{
+    font-size: 20px;
+  }
+  img.img-single{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    width: 20em;
   }
 
   li a {
@@ -208,13 +219,17 @@ form {
 h1,
 h2,
 h3 {
-  color: #af224d;
+  color:#f5fbf9;
+  font-weight: bold;
   align-items: center;
   text-align: center;
   margin-top: 10px;
 }
+h1{
+   color: #f5fbf9;
+}
 h2,h3{
-  font-size: 26px;
+  font-size: 22px;
 }
 h5 {
   color:rgb(10, 216, 10);
@@ -223,7 +238,9 @@ h5 {
   text-align: center;
   margin-top: 10px;
 }
-
+h3.title-row{
+  color: #000000;
+}
 a {
   color: black; //white;
   cursor: pointer;
@@ -252,6 +269,7 @@ ul {
   a {
     text-decoration: none;
     cursor: pointer;
+    
   }
 }
 

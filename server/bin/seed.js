@@ -101,6 +101,16 @@ const dataWish = [{
   user: userId2
 },
 {
+  title: "Caligrafía Copperplate",
+  description: "Curso caligrafía Inglesa nivel II",
+  price: 190,
+  date: "10/02/2020",
+  deadline: "20/06/2020",
+  image:"/images/deletras.jpg",
+  wishGranted: "https://deletras.com/producto/caligrafia-inglesa-nivel-2/",
+  user: userId1
+},
+{
   title: "Iniciación al punto",
   description: "Taller continuo de iniciación al punto",
   price: 60,
@@ -109,6 +119,16 @@ const dataWish = [{
   image: "/images/agujas-lana-y-punto.jpg",
   wishGranted: "https://www.thehobbymaker.com/curso/taller-continuo-de-iniciacion-al-punto/02032020-2/",
   user: userId2
+},
+{
+  title: "Iniciación al punto",
+  description: "Taller continuo de iniciación al punto",
+  price: 60,
+  date: "29/02/2020",
+  deadline: "01/10/2020",
+  image: "/images/agujas-lana-y-punto.jpg",
+  wishGranted: "https://www.thehobbymaker.com/curso/taller-continuo-de-iniciacion-al-punto/02032020-2/",
+  user: userId1
 },
 {
   title: "Roge Noir Channel",
@@ -151,6 +171,16 @@ const dataWish = [{
   user: userId2
 },
 {
+  title: "Acuarela Museo Abc",
+  description: "Taller Acualela, la Técnica al completo, Pablo Rubén López Sanz",
+  price: 90,
+  date: "02/03/2020",
+  deadline: "04/09/2020",
+  image: "/images/CURSO-ACUARELA-web.jpg",
+  wishGranted: "https://proticketing.com/rugbywandametropolitano/es_ES/entradas/evento/17171?gclid=EAIaIQobChMIxK7d4ML75wIVScreCh0t8AHZEAAYASAAEgIU3_D_BwE",
+  user: userId1
+},
+{
   title: "Madrid Open",
   description: "Entradas tenis Madrid",
   price: 148,
@@ -159,6 +189,16 @@ const dataWish = [{
   image: "/images/madridtenis.jpeg",
   wishGranted: "https://www.madrid-open.com/entradas/?gclid=EAIaIQobChMI9t77tqaN6AIVC_lRCh1QvgDTEAAYASAAEgKFB_D_BwE",
   user: userId2
+},
+{
+  title: "Madrid Open",
+  description: "Entradas tenis Madrid",
+  price: 148,
+  date: "09/03/2020",
+  deadline: "09/05/2020",
+  image: "/images/madridtenis.jpeg",
+  wishGranted: "https://www.madrid-open.com/entradas/?gclid=EAIaIQobChMI9t77tqaN6AIVC_lRCh1QvgDTEAAYASAAEgKFB_D_BwE",
+  user: userId1
 }
 ]
 

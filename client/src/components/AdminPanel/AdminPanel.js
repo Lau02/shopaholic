@@ -14,6 +14,7 @@ export default function AdminPanel(props) {
                 <WishList></WishList>
                 </div>
                 <div className="col-4">
+                {/* <Finances  {...props}></Finances> */}
                 <Finances sumAllSavings={(savings) => props.sumAllSavings(savings)} {...props}></Finances>
                 </div>
                 

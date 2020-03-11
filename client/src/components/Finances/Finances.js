@@ -7,21 +7,9 @@ class Finances extends Component {
         super(props);
         this.state = {
             saving: '',
-            totalSavings: null
+            totalSavings: 0
         }
         this.service = new FinancesService();
-    }
-
-    componentDidMount(){
-        console.log('component did mount')
-        const userId = this.props.match.params.id
-        this.service.getAllSavings(userId)
-        .then(response => {
-            console.log(response)
-            this.setState({
-                totalSavings: this.props.sumAllSavings(response)
-            })
-        })
     }
 
     handleSaving = (event) => {
@@ -30,14 +18,33 @@ class Finances extends Component {
         })
     }
 
+    componentDidMount(){
+        this.sumAllSavings()
+    }
+
+    sumAllSavings = () => {
+        const userId = this.props.match.params.id
+        this.service.getAllSavings(userId)
+        .then(response => {
+            let allSavings = response.reduce((ac,cu) => {
+                console.log(ac, cu)
+                return cu && ac + cu.saving
+            },0)
+            this.setState({
+                totalSavings: allSavings
+            })
+        })
+    }
+
+
     handleSubmit = (event) => {
         event.preventDefault();
        this.service.getNewSaving(this.state)
        .then(_ => {
-            this.setState({
-                saving:'',
+            this.sumAllSaving();
+                this.setState({saving:''})
             })  
-        })
+        
     }
     
     render(){

@@ -27,7 +27,7 @@ export default class WishList extends React.Component {
     return (
         <section className="wishlist">
           {/* <h2>Binevenido a tu Area privada {this.props.lggedname}</h2> */}
-          <Link className="linknew"to={'/new'}>New Wish</Link>
+          <Link className="linknew font-weight-bold"to={'/new'}>New Wish</Link>
             {this.state.wishes && this.state.wishes.length > 0 && (
               <React.Fragment>
                 <h1>Your Wish List </h1>
