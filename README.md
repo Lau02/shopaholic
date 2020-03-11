@@ -1,4 +1,4 @@
-# shopaholic
+# shopaholics
  Final Ironhack project
  
  
