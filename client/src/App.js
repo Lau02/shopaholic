@@ -91,8 +91,8 @@ class App extends Component {
                 <Switch>
                   <Route path="/new" exact render={() => <NewWish userInSession={this.state.loggedInUser}></NewWish>}></Route>
                   <Route exact path="/user/:id" render={(props) => <AdminPanel {...props}></AdminPanel>}></Route>
-                  <Route exact path="/wishes/:id" render ={(props) => <SingleWish {...props}></SingleWish>}></Route>
-                  {/* <Route exact patth="/wishes/:id" render ={(props) => <DeleteWish {...props}></DeleteWish>}></Route> */}
+                  {/* <Route exact path="/wishes/:id" render ={(props) => <SingleWish {...props}></SingleWish>}></Route> */}
+                  <Route exact path="/wishes/:id" render ={(props) => <SingleWish {...props} userInSession={this.state.loggedInUser}></SingleWish>}></Route>
                 </Switch>
               </main>
           

@@ -25,14 +25,22 @@ class Service {
   }
 
   updateOneWish = (id) => {
-    return this.service.put('/:id')
+    return this.service.put(`/${id}`)
     .then(response => response.data)
   }
 
+  // deleteOneWish = (id) => {
+  //   this.service.deleteOneWish('/:id')
+  //   .then(response => response.data)
+  // }
+
   deleteOneWish = (id) => {
-    return this.service.delete('/:id')
+    console.log(id)
+    return this.service.delete(`/delete/${id}`)
     .then(response => response.data)
   }
+
+
 }
 
 export default Service;

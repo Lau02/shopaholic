@@ -24,27 +24,26 @@ export default class SingleWish extends React.Component {
     })
   }
 
-  deleteOneWish = (id )=> {
-    let wishId = this.state.wish.id;
-    this.services
-      .deleteOneWish(wishId)
-      .then(() => this.updateWish())
+  deleteOneWish = id => {
+    this.service.deleteOneWish(id)
+      .then(() => this.props.history.push(`/user/${this.props.userInSession._id}`))
       .catch(err => console.log(err));
   };
+  
 
-  updateOneWish = () => {
-    this.services
-      .getOneWish(this.state.userId)
+
+  updateOneWish = id => {
+    this.services.updateOneWish(id)
       .then(wishes => this.setState({ wishes: wishes }))
       .catch(err => console.log(err));
   };
 
 
-  //  days =(date) =>{
-  // let date1 = moment({this.state.wish.date});
-  // let date2 = moment({this.state.wish.wishgranted});
-  // console.log(date2.diff(date1, 'days'), ' Remaining days');
-  // }
+   days =(date) =>{
+  let date1 = moment({this.state.wish.date});
+  let date2 = moment({this.state.wish.wishgranted});
+  console.log(date2.diff(date1, 'days'), ' Remaining days');
+  }
 
 
   render() {
@@ -57,24 +56,25 @@ export default class SingleWish extends React.Component {
             <h2 className="price:">Price: {this.state.wish.price} €</h2>
             <h2 className="date:">Date: {this.state.wish.date}</h2>
             <h2 className="deadline:">Deadline: {this.state.wish.deadline}</h2>
-            {/* <h2>Remaining days: {days()}</h2> */}
+            <h2>Remaining days: {days()}</h2>
             <a target="_blank" href={this.state.wish.wishGranted}><h2>Wish Granted</h2></a>
 
        </div>
        <div className="container2">
        <img  className="img-single" src={this.state.wish.image} alt=""/>
-       </div>
-       <div>
-        
+      <br></br>
+        <div className="buttons-del-up">
             {/* <Link className="linkdelete"to={'/:id'}>Delete wish <DeleteWish></DeleteWish></Link> */}
             {/* <button className="button is-danger" onClick={this.service.deleteOneWish}>Delete</button> */}
             {/* <button className="button is-danger" onClick={this.props.delete}>Delete</button> */}
             {/* <Link className="linkupdate"to={'/:id'}>Update wish</Link> */}
-            <button className="button is-dark" onClick={() => this.deleteOneWish(this.state.wish.id)}>Delete</button>
+            <button className="button is-dark is-large" onClick={() => this.deleteOneWish(this.state.wish._id)}>Delete</button>
+            <button className="button is-dark is-large" onClick={() => this.updateOneWish(this.state).wish._id}>Update</button>
             {/* <button className="button is-danger" onClick={() => this.deleteOneWish(this.state.wish._id)}>Delete</button> */}
             {/* <button className="button is-danger" onClick={(alert('Sure you want to delete this wish?'))}Delete></button> */}
               
             </div>
+            </div>  
        
           
       </section>

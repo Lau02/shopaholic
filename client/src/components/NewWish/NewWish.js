@@ -66,7 +66,7 @@ class NewWish extends Component {
   render(){
     return (
       <div>
-      <Link to={`/user/${this.props.userInSession._id}`}>Back to your Wishes</Link>
+      <Link to={`/user/${this.props.userInSession._id}`}>Back to Wishes</Link>
       <h1>Add a new wish</h1>
       <form onSubmit={this.handleFormSubmit}>
           <label className="quetepintes">Title:</label>

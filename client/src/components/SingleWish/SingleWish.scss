@@ -29,3 +29,11 @@ img.image-single{
     align-content: center;
     
 }
+.buttons-del-up{
+    display: flex;
+	flex-direction: row;
+	flex-wrap: nowrap;
+	justify-content: space-around;
+	align-items: center;
+	align-content: flex-start;
+}

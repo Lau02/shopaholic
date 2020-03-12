@@ -57,7 +57,7 @@ router.post("/new", (req, res, next) => {
 
 //Eliminar 🆗
 
-router.delete("/:id", (req, res, next) => {
+router.delete("/delete/:id", (req, res, next) => {
   Wish.findByIdAndDelete(req.params.id).then(deletedWish =>
     res.json({ deleted: true, deletedWish })
   );

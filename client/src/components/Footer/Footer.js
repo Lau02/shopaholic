@@ -5,7 +5,7 @@ export default function Footer() {
     return (
         <footer className="footer-container">
             <div className="share">
-                <h4>Share</h4>
+              
                 <a className="whatsapp" href="whatsapp://send?text=shopaholics.herokuapp.com" data-action="share/whatsapp/share"> <img src="/images/whatsapp-icone.png"  alt=""></img> </a>
             </div>
             <div className="copyright">
