@@ -7,9 +7,9 @@ class Home extends Component {
     return (
       
    <React.Fragment className="main">
-    <h1>Welcome to Shopaholic</h1>
+    <h1>Welcome to Shopaholic.</h1>
       <div className="welcome">
-        <h1>To stop throwing your money, please click here:</h1>
+        <h1>To stop throwing your money, please click next:</h1>
            <Link to="/Signup" className="Signup-home">
             Signup
             </Link> 

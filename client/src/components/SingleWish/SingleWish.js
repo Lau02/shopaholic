@@ -53,27 +53,28 @@ export default class SingleWish extends React.Component {
         <div className="contaniner">
             <h1>{this.state.wish.title}</h1>
             
-            <h2 className="descrption:">Description: {this.state.wish.description}</h2>
+            <h2 className="descrption:">{this.state.wish.description}</h2>
             <h2 className="price:">Price: {this.state.wish.price} €</h2>
             <h2 className="date:">Date: {this.state.wish.date}</h2>
             <h2 className="deadline:">Deadline: {this.state.wish.deadline}</h2>
             {/* <h2>Remaining days: {days()}</h2> */}
-            <h2 className="wishgranted:"></h2> <Link to={this.state.wish.wishGranted} className="linknew font-weight-bold">Wish granted:🧞</Link>
+            <a target="_blank" href={this.state.wish.wishGranted}><h2>Wish Granted</h2></a>
+
        </div>
        <div className="container2">
        <img  className="img-single" src={this.state.wish.image} alt=""/>
        </div>
-       
+       <div>
         
             {/* <Link className="linkdelete"to={'/:id'}>Delete wish <DeleteWish></DeleteWish></Link> */}
             {/* <button className="button is-danger" onClick={this.service.deleteOneWish}>Delete</button> */}
             {/* <button className="button is-danger" onClick={this.props.delete}>Delete</button> */}
             {/* <Link className="linkupdate"to={'/:id'}>Update wish</Link> */}
-            <button className="button is-danger" onClick={() => this.deleteOneWish(this.state.wish.id)}>Delete</button>
+            <button className="button is-dark" onClick={() => this.deleteOneWish(this.state.wish.id)}>Delete</button>
             {/* <button className="button is-danger" onClick={() => this.deleteOneWish(this.state.wish._id)}>Delete</button> */}
             {/* <button className="button is-danger" onClick={(alert('Sure you want to delete this wish?'))}Delete></button> */}
               
-      
+            </div>
        
           
       </section>
