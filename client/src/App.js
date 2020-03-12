@@ -7,8 +7,6 @@ import Signup from "./components/auth/Signup";
 import Login from "./components/auth/Login";
 import Home from "./components/Home/Home";
 import NewWish from "./components/NewWish/NewWish";
-//import WishList from "./components/WishList/WishList"
-
 import AuthService from "./services/AuthService";
 import Footer from "./components/Footer/Footer";
 import AdminPanel from "./components/AdminPanel/AdminPanel";
@@ -60,8 +58,7 @@ class App extends Component {
           <div className="App">
            
               <header className="App-header">
-                <a href='/'><img src="/images/stop2.png" alt=""/></a>
-                <h1 className="shopaholic">Shopaholics</h1>
+                <Link to="/" /><img id="shop-logo"src="/images/shopaholics_blanco.svg" alt="Shopaholic"/>
                 <div className="navbar">
                 <Navbar userInSession={this.state.loggedInUser} logout={this.logout}  {...this.props}/>
                 </div>
@@ -89,8 +86,8 @@ class App extends Component {
           <div className="App">
 
             <header className="App-header">
-              <img src="/images/stop2.png" alt=""></img>
-              <h1 className="shopaholic">Shopaholics</h1>
+              {/* <img src="/images/stop2.png" alt=""></img> */}
+              <img id="shop-logo"src="/images/shopaholics_blanco.svg" alt="Shopaholic"/>
               <div className="navbar">
               <Navbar userInSession={this.state.loggedInUser} logout={this.logout}  {...this.props}/>
               </div>

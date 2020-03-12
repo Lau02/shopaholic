@@ -44,8 +44,8 @@ const dataWish = [{
   title: "Viajazo",
   description: "Aruba Todo incluido 10 días, hotel Only Adults",
   price: 3524,
-  date: "01/03/2020",
-  deadline: "01/09/2021",
+  date: "01-03-2020",
+  deadline: "01-09-2021",
   image: "/images/aruba.jpg",
   wishGranted:"https://www.logitravel.com/packagesasyncsp/BookingDetailsMaterial?AvailabilityId=59908F3137318EDB5D2D9C3775D41598&HashRooms=30A&DestinationCode=9478&DestinationType=ZON&OriginAirportCode=MAD&SelectedTransportOption=&SelectedTransportOptionBaggages=&SelectedTransfer=&SelectedCarOption=&BoardHash=106278%7CTI%7CHabitaci%C3%B3n%2BDeluxe%2B-%2BVista%2BMar%7CFalse%7CFalse&DestinationAirportCode=&Spc=1569453666&Dimension=&SelectedHotelOption=106278&HotelChain=&CabinClass=0&FamilyDiscount=0&ProductType=9&DepartureDate=23%2F03%2F2020&ReturnDate=02%2F04%2F2020&LineOfBusiness=1&LeisureHoliday=0&AdvertisementCode=&VehiclesHash=&Bonification=0&FamilyFare=&Tab=0&ShowSearcher=false&BoardCode=",
   user: userId1

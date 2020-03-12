@@ -56,7 +56,12 @@ export default class SingleWish extends React.Component {
   render() {
     return (
       <section className="hero-single">
-        <div className="contaniner">
+  <div className="contaniner"></div>
+
+        <div >
+        <div>
+        <Link  className="back-wish"to={`/user/${this.props.userInSession._id}`}>Back to Wishes</Link>
+        </div>
             <h1>{this.state.wish.title}</h1>
             
             <h2 className="descrption:">{this.state.wish.description}</h2>
