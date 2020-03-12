@@ -1,12 +1,11 @@
 import React, { Component } from "react";
 import "./scss/App.scss"
-import { Switch, Route, Link } from "react-router-dom";
+import { Switch, Route, Link, withRouter, Redirect } from "react-router-dom";
 
 import Navbar from "./components/navbar/Navbar";
 import Signup from "./components/auth/Signup";
 import Login from "./components/auth/Login";
 import Home from "./components/Home/Home";
-// import SingleWish from "./components/SingleWish/SingleWish";
 import NewWish from "./components/NewWish/NewWish";
 //import WishList from "./components/WishList/WishList"
 
@@ -14,13 +13,12 @@ import AuthService from "./services/AuthService";
 import Footer from "./components/Footer/Footer";
 import AdminPanel from "./components/AdminPanel/AdminPanel";
 import SingleWish from "./components/SingleWish/SingleWish";
-import DeleteWish from "./components/DeleteWish/DeleteWish";
 
 
 class App extends Component {
   constructor(props) {
     super(props);
-    this.state = { loggedInUser: null };
+    this.state = { loggedInUser: null , navigate: false};
     this.service = new AuthService();
 
     this.fetchUser()
@@ -34,8 +32,8 @@ class App extends Component {
 
   logout = () => {
     this.service.logout().then(() => {
-      this.setState({ loggedInUser: null });
-      //this.props.history.push(`/`)
+      this.setState({ loggedInUser: null, navigate: true }, ()=>console.log(this.state));
+      
     });
   };
 
@@ -54,24 +52,6 @@ class App extends Component {
       });
   }
 
-  //  sumAllSavings = (savings) => {
-  //    console.log(savings)
-  //     let allSaving = savings.reduce((ac, cu) => {
-  //         return cu.saving && ac + cu.saving;
-  //     })
-  //     console.log(allSaving)
-  //     return allSaving;
-  // }
-
-//   sumAllSavings = (savings) => {
-//     if(savings.length > 0) {
-//      let allSaving = savings.reduce((ac, cu) => {
-//        return cu.saving && ac + cu.saving;
-//      })
-//      return allSaving;
-//    }
-//  }
- 
 
   render() {
     if (this.state.loggedInUser) {
@@ -123,7 +103,7 @@ class App extends Component {
                   <Route exact path="/login" render={(props) => <Login getUser={this.getUser}  {...props}/>} />
                 </Switch>
             </main>
-
+              {(this.state.navigate) && <Redirect to="/" push="true"/>}
             <Footer></Footer>
 
           </div>

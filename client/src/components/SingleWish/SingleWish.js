@@ -3,7 +3,7 @@ import WishesService from '../../services/WishesService';
 import { Link } from 'react-router-dom';
 import './SingleWish.scss';
 import DeleteWish from '../DeleteWish/DeleteWish';
-
+import moment from 'moment'
 
 
 export default class SingleWish extends React.Component {
@@ -39,11 +39,18 @@ export default class SingleWish extends React.Component {
   };
 
 
-   days =(date) =>{
-  let date1 = moment({this.state.wish.date});
-  let date2 = moment({this.state.wish.wishgranted});
-  console.log(date2.diff(date1, 'days'), ' Remaining days');
-  }
+  //  days =(date) =>{
+  // let date1 = moment({this.state.wish.date});
+  // let date2 = moment({this.state.wish.wishgranted});
+  // console.log(date2.diff(date1, 'days'), ' Remaining days');
+  // }
+
+  days =() =>{
+    let date1 = moment(this.state.wish.date);
+    let date2 = moment(this.state.wish.wishgranted);
+    console.log(date1, date2)
+    return date2.diff(date1, 'days') + ' days remaining';
+}
 
 
   render() {
@@ -56,7 +63,7 @@ export default class SingleWish extends React.Component {
             <h2 className="price:">Price: {this.state.wish.price} €</h2>
             <h2 className="date:">Date: {this.state.wish.date}</h2>
             <h2 className="deadline:">Deadline: {this.state.wish.deadline}</h2>
-            <h2>Remaining days: {days()}</h2>
+            <h2 className="limit">Limit: {this.days()}</h2>
             <a target="_blank" href={this.state.wish.wishGranted}><h2>Wish Granted</h2></a>
 
        </div>

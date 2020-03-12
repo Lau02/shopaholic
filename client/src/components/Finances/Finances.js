@@ -1,5 +1,6 @@
 import React, {Component} from 'react';
 import FinancesService from '../../services/FinancesService';
+import SomethingSocial from '../SomethingSocial/SomethingSocial';
 class Finances extends Component {
     constructor(props){
         super(props);
@@ -38,19 +39,27 @@ class Finances extends Component {
             this.sumAllSavings();
         })
     }
+
+   
+
     render(){
+        // const price = this.props.totalSavings > 700
+       
         console.log('render')
         return (
+            
             <div className="finances">
-                <h1>Hola soy tus finanzas</h1>
-                <br></br>
-               <h2>Saved until today:<span>{this.state.totalSavings} €</span></h2> 
+                
+              <br></br>
+               <h1>Saved until today:<span>{this.state.totalSavings} €</span></h1> 
                <br></br>
                     <form onSubmit={this.handleSubmit}>
                    <label>Add new saving:</label>
                     <input type="text"  name="saving" value={this.state.saving} placeholder="new saving" onChange={(e) => this.handleSaving(e)}/>
                     <input type="submit" value="Submit"/>   
                     </form> 
+                    {/* {(price) && <SomethingSocial></SomethingSocial>} */}
+                     {(this.state.totalSavings > 700)? <SomethingSocial></SomethingSocial>: null}
              </div>   
            ) 
     }

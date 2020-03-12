@@ -15,9 +15,9 @@
 
     a{
       font-size: 20px;
-      font-weight: bold;
-      
+      font-weight: bold; 
     }
+
 
     .table .is-striped {
       display: flex;
@@ -57,7 +57,7 @@
 
       input[type="text"] {
         width: 12em;
-        background-color: #080000;
+        background-color: #1d0f0f;
         font-size: 1.4em;
         color:  #ed1818
       }
@@ -121,7 +121,7 @@
 
   img.img-home1 {
     margin-top: 6em;
-    width: 400px;
+    width: 600px;
   }
 
 
@@ -150,7 +150,16 @@
       padding: 0px 0.2em;
     }
   }
+  .donate{
+    background-color: #f5fbf9;
+    display: flex;
+    justify-content: center;
+    max-width: 200px;
+    border-radius: 5px;
+    border: 2px solid rgb(214, 80, 154);
+    color: black,
 
+  }
   .signup .login {
     display: flex;
     justify-content: space-between;
@@ -193,7 +202,7 @@
     width: 40%;
     padding: 8px 16px;
     margin-top: 32px;
-    border: 2px solid #000000;
+    border: 2px solid #312929;
     border-radius: 5px;
     display: block;
     color: #fff;
@@ -375,6 +384,14 @@ fieldset {
 
 a.wish-row {
   color: #000000;
+}
+#social{
+	display: flex;
+	flex-direction: column;
+	flex-wrap: nowrap;
+	justify-content: center;
+	align-items: center;
+	align-content: center;
 }
 
 /* color: #950622; #f38aab; #f5fbf9 ;#f1a9cd; #ed1818*/
