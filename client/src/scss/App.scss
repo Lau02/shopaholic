@@ -111,6 +111,7 @@
   }
   .navbar{
     border-radius: 2px;
+    max-width: 700px;
   }
 
   div.app {
@@ -303,7 +304,7 @@ a {
 
 nav {
   font-display: flex;
-  max-width: 1000px;
+  max-width: 800px;
   justify-content: space-arround;
   align-items: center;
   width: 100vw;
@@ -331,6 +332,7 @@ ul {
 .nav-style {
   font-display: flex;
   justify-content: space-between;
+  max-width: 800px;
 
 }
 
@@ -416,6 +418,9 @@ a.wish-row {
 }
 div.wishlist.col-6{
  width: 900px;
+}
+.back-wish{
+  border: 1px solid #f5fbf9
 }
 
 /* color: #950622; #f38aab; #f5fbf9 ;#f1a9cd; #ed1818*/

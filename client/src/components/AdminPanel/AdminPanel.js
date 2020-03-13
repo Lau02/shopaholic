@@ -1,5 +1,5 @@
 import React from 'react'
-// import { Link } from "react-router-dom";
+ import { Link } from "react-router-dom";
 import WishList from '../../components/WishList/WishList'
 import Finances from '../Finances/Finances'
 import './AdminPanel.scss'
@@ -10,6 +10,7 @@ export default function AdminPanel(props) {
     return (
         <div>   
                 <div id="home">
+                <Link  className="back-home"to="/">Back Home</Link>
                
                 <div className="wishlist col-6">
                 <WishList></WishList>
