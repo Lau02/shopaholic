@@ -2,7 +2,9 @@
  Proyecto final en Ironhack.
  
  Shophaholic es una App creada para organizar deseos. 
-Een función de nuestros ahorros, mos dará el visto bueno para poder realizarlos cuando podamos permitírnoslos.
+ 
+ 
+En función de nuestros ahorros, mos dará el visto bueno para poder realizarlos cuando podamos permitírnoslos.
  
  Este proyecto fue inciado con Create React App.
  
