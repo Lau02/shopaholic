@@ -1,17 +1,24 @@
 # shopaholics
- Final Ironhack project
+ Proyecto final en Ironhack.
+ 
+ Shophaholic es una App creada para organizar deseos. 
  
  
- This project was bootstrapped with Create React App.
+En función de nuestros ahorros, mos dará el visto bueno para poder realizarlos cuando podamos permitírnoslos.
+ 
+ Este proyecto fue inciado con Create React App.
  
  
  Available Scripts
  
  
-In the project directory, you can run:
+
+En el directorio del proyecto, puede ejecutar:
 
 npm start
 
 
-Runs the app in the development mode.
-Open http://localhost:3000 to view it in the browser.
+
+Ejecuta la aplicación en modo de desarrollo.
+
+Abra http://localhost:3000 para verlo en el navegador.
