@@ -1,5 +1,6 @@
 import React, { Component } from 'react';
 import { Link } from "react-router-dom";
+import './Home.scss'
 
 
 class Home extends Component {
@@ -20,6 +21,7 @@ class Home extends Component {
               </div>
               
       </div> 
+      <section className="sec" id="section2"></section>
     </React.Fragment>
   )}
 }

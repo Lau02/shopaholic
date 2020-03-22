@@ -1,7 +1,83 @@
 main .nouser{
     display: flex;
-    flex-direction: row;
-    
-
+    flex-direction: row
  
 }
+
+.sec{
+    width: 100%;
+    height: 100%;
+    padding: 0;
+    margin: 0;
+}
+.parallax{
+    background: #fff fixed no-repeat 50% 50%;
+    background-size: cover;
+
+}
+
+
+#home {
+    display: flex;
+    // flex-direction: row;
+    // flex-wrap: nowrap;
+    // justify-content: space-around;
+    // align-items: center;
+    // align-content: space-between;
+    // font-size: 14px;
+
+    // td {
+    //   font-size: 20px;
+    // }
+
+    input {
+    //   width: 8em;
+    }
+
+    input[type="text"] {
+      width: 12em;
+      background-color: #1d0f0f;
+      font-size: 1.4em;
+      color: #ed1818
+    }
+
+
+  }
+  main {
+    padding: 3rem;
+    width: 100%;
+    height: 100%;
+
+    a {
+      font-size: 20px;
+      font-weight: bold;
+    }
+
+    .button .is-large {
+      color: #af224d;
+    }
+
+    .Signup-home {
+      width: 20%;
+      padding: 8px 16px;
+      margin-top: 32px;
+      border: 2px solid #f1a9cd;
+      border-radius: 5px;
+      display: block;
+      color: #fff;
+      font-size: 18px;
+      font-weight: bold;
+      background-color: #af224d;
+      text-align: center;
+    }
+
+    .welcome {
+      display: flex;
+      flex-direction: column;
+      flex-wrap: nowrap;
+      justify-content: space-around;
+      align-items: center;
+      align-content: center;
+    }
+
+  }

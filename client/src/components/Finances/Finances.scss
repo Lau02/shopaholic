@@ -1,6 +1,14 @@
 .finances-form{
     imput{
         height: 200px;
-    }
-    
+    }  
 }
+div.finances {
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end;
+  }
+
+  h1 > span{
+      color: #000000
+  }

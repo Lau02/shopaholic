@@ -5,6 +5,7 @@ import WishesService from '../../services/WishesService';
 import { Link } from 'react-router-dom';
 
 
+
 export default class WishList extends React.Component {
     constructor(props){
       super(props)
@@ -36,6 +37,7 @@ export default class WishList extends React.Component {
                       {this.state.wishes.map(wish => (
                           <WishItems {...wish} key={wish._id}></WishItems>
                       ))}
+
                     </div>
                   </div>
               </React.Fragment>

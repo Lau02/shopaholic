@@ -9,7 +9,7 @@ h2.limit{
 }
 }
 img.image-single{
-    width: 3em;
+    // width: 3em;
 }
 .hero-single{
     display: flex;
@@ -44,3 +44,11 @@ img.image-single{
 a.back-wish{
     margin-bottom: 10px;
 }
+
+img.img-single {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    width: 35em;
+  }

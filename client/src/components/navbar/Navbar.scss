@@ -1,9 +1,23 @@
-.nav-style .header {
-	display: flex;
-	justify-content: flex-end;
-	align-items: center;
-}
+// .nav-style .header {
+// 	display: flex;
+// 	justify-content: flex-end;
+// 	align-items: center;
+// }
 
-.nav-style .header img {
-	margin-right: 20px;
-}
+// .nav-style .header img {
+// 	margin-right: 20px;
+// }
+
+.navbar {
+    border-radius: 2px;
+    max-width: 600px;
+  }
+
+  .nav-style {
+	display: flex;
+	flex-direction: row;
+	flex-wrap: nowrap;
+	justify-content: space-around;
+	align-items: center;
+	align-content: center;
+  }
